@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  db:
+    image: hashicorpdemoapp/product-api-db:v0.0.22
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: products
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+
+  api:
+    image: hashicorpdemoapp/product-api:v0.0.22
+    ports:
+      - "19090:9090"
+    environment:
+      DB_CONNECTION: "host=db port=5432 user=postgres password=password dbname=products sslmode=disable"
+      BIND_ADDRESS: "0.0.0.0:9090"
+    depends_on:
+      - db
+    command: ["/bin/sh", "-c", "sleep 5 && /app/product-api"]
+
+# Made with Bob
