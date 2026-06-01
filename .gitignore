@@ -52,5 +52,5 @@ acceptance-tests/
 .vscode/CONTRIBUTING.md
 .vscode/PLAN.md
 .vscode/QUICKSTART.md
-
+.vscode/docs/*
 .vscode/SETUP.md
