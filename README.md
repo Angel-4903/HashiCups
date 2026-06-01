@@ -137,15 +137,6 @@ Or run tests manually:
 TF_ACC=1 go test -v ./internal/provider/
 ```
 
-## Documentation
-
-Full documentation is available in the [docs](./docs) directory:
-
-- [Provider Configuration](./docs/index.md)
-- [Data Sources](./docs/data-sources/)
-  - [hashicups_coffees](./docs/data-sources/coffees.md)
-- [Resources](./docs/resources/)
-  - [hashicups_order](./docs/resources/order.md)
 
 ## Project Structure
 
@@ -175,11 +166,5 @@ Full documentation is available in the [docs](./docs) directory:
 - ✅ Example configurations
 - ✅ GitHub Actions CI/CD pipeline
 - ✅ Built with Terraform Plugin Framework
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
 
 This is a demo provider for educational purposes.
